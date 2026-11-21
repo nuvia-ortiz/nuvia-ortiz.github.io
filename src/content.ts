@@ -7,6 +7,17 @@ export const contact = {
   linkedin: "",
 };
 
+export type Project = {
+  name: string;
+  text: string;
+  tags: string[];
+  image: { src: string; alt: string; width: number; height: number };
+  repo: string;
+};
+
+const snagkitTags = ["TypeScript", "React", "Chrome Extension (MV3)", "Tailwind CSS", "Vitest", "Playwright"];
+const snagkitImage = (alt: string) => ({ src: "/projects/snagkit.png", alt, width: 1440, height: 1307 });
+
 type Job = { role: string; company: string; period: string; text?: string };
 
 type Content = {
@@ -16,7 +27,7 @@ type Content = {
   experience: { title: string; jobs: Job[] };
   education: { title: string; degree: string; school: string; achievement: string };
   skills: { title: string; groups: { name: string; items: string[] }[] };
-  projects: { title: string; body: string; cta: string };
+  projects: { title: string; body: string; cta: string; code: string; items: Project[] };
   contactSection: { title: string; body: string };
   footer: string;
 };
@@ -83,8 +94,18 @@ export const content: Record<Lang, Content> = {
     skills: { title: "Skills", groups: skills(["Frontend", "Backend", "Data", "Design", "Workflow"]) },
     projects: {
       title: "Projects",
-      body: "New projects are on the way. Follow the progress on GitHub.",
+      body: "More projects on the way. Follow the progress on GitHub.",
       cta: "See GitHub",
+      code: "Code",
+      items: [
+        {
+          name: "Snagkit",
+          text: "A QA toolkit that lives in the browser. One click turns a bug into a complete report: annotated screenshot, steps to reproduce, console errors and failed requests. It also tests every form on a page without submitting it, and stress-tests the layout with longer text, 200% zoom and right-to-left to find what breaks. Runs 100% locally.",
+          tags: snagkitTags,
+          image: snagkitImage("Snagkit bug report editor with an annotated screenshot, steps to reproduce, console errors and failed requests"),
+          repo: "https://github.com/nuvia-ortiz/snagkit",
+        },
+      ],
     },
     contactSection: {
       title: "Contact",
@@ -145,8 +166,18 @@ export const content: Record<Lang, Content> = {
     skills: { title: "Habilidades", groups: skills(["Frontend", "Backend", "Datos", "Diseño", "Flujo de trabajo"]) },
     projects: {
       title: "Proyectos",
-      body: "Estoy preparando proyectos nuevos. Sigue el avance en GitHub.",
+      body: "Vienen más proyectos. Sigue el avance en GitHub.",
       cta: "Ver GitHub",
+      code: "Código",
+      items: [
+        {
+          name: "Snagkit",
+          text: "Un kit de QA que vive en el navegador. Con un clic convierte un bug en un reporte completo: captura anotada, pasos para reproducirlo, errores de consola y peticiones fallidas. Además prueba todos los formularios de una página sin enviarlos y somete el diseño a estrés con texto largo, zoom al 200 % y derecha a izquierda para ver qué se rompe. Funciona 100 % en local.",
+          tags: snagkitTags,
+          image: snagkitImage("Editor de reportes de Snagkit con una captura anotada, pasos para reproducir, errores de consola y peticiones fallidas"),
+          repo: "https://github.com/nuvia-ortiz/snagkit",
+        },
+      ],
     },
     contactSection: {
       title: "Contacto",

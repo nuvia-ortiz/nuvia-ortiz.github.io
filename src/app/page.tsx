@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { contact, content, type Lang } from "@/content";
 
@@ -198,16 +199,41 @@ export default function Home() {
 
         <section id="projects" className="scroll-mt-20 py-14">
           <SectionTitle index="04">{t.projects.title}</SectionTitle>
-          <div className="rounded-lg border border-dashed border-zinc-800 p-6 sm:p-8">
-            <p className="text-zinc-400">{t.projects.body}</p>
-            <a
-              href={contact.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 font-mono text-sm text-accent hover:underline"
-            >
-              <GitHubIcon /> {t.projects.cta} →
-            </a>
+          <div className="space-y-8">
+            {t.projects.items.map((p) => (
+              <article key={p.name} className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/40">
+                <a href={p.repo} target="_blank" rel="noopener noreferrer" className="block border-b border-zinc-800">
+                  <Image src={p.image.src} alt={p.image.alt} width={p.image.width} height={p.image.height} className="aspect-video w-full object-cover object-top" />
+                </a>
+                <div className="p-5 sm:p-6">
+                  <div className="flex flex-wrap items-baseline justify-between gap-3">
+                    <h3 className="text-xl font-semibold text-zinc-50">{p.name}</h3>
+                    <a
+                      href={p.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:underline"
+                    >
+                      <GitHubIcon /> {t.projects.code} →
+                    </a>
+                  </div>
+                  <p className="mt-3 text-zinc-400">{p.text}</p>
+                  <ul className="mt-4 flex flex-wrap gap-2" aria-label="Tech stack">
+                    {p.tags.map((tag) => (
+                      <li key={tag} className="rounded border border-zinc-800 bg-zinc-900/60 px-2.5 py-1 font-mono text-xs text-zinc-300">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+            <p className="text-sm text-zinc-500">
+              {t.projects.body}{" "}
+              <a href={contact.github} target="_blank" rel="noopener noreferrer" className="font-mono text-accent hover:underline">
+                {t.projects.cta} →
+              </a>
+            </p>
           </div>
         </section>
 
