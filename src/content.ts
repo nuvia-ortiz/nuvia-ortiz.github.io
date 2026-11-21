@@ -13,7 +13,11 @@ export type Project = {
   tags: string[];
   image: { src: string; alt: string; width: number; height: number };
   repo: string;
+  demo?: string;
 };
+
+const vetsheetTags = ["Python", "Django", "Django REST Framework", "WebSockets", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Playwright"];
+const vetsheetImage = (alt: string) => ({ src: "/projects/vetsheet.png", alt, width: 1425, height: 1553 });
 
 const snagkitTags = ["TypeScript", "React", "Chrome Extension (MV3)", "Tailwind CSS", "Vitest", "Playwright"];
 const snagkitImage = (alt: string) => ({ src: "/projects/snagkit.png", alt, width: 1440, height: 1307 });
@@ -27,7 +31,7 @@ type Content = {
   experience: { title: string; jobs: Job[] };
   education: { title: string; degree: string; school: string; achievement: string };
   skills: { title: string; groups: { name: string; items: string[] }[] };
-  projects: { title: string; body: string; cta: string; code: string; items: Project[] };
+  projects: { title: string; body: string; cta: string; code: string; demo: string; items: Project[] };
   contactSection: { title: string; body: string };
   footer: string;
 };
@@ -97,7 +101,16 @@ export const content: Record<Lang, Content> = {
       body: "More projects on the way. Follow the progress on GitHub.",
       cta: "See GitHub",
       code: "Code",
+      demo: "Live demo",
       items: [
+        {
+          name: "VetSheet",
+          text: "Veterinary records that pet owners can follow in real time. The vet records the diagnosis, the treatment plan and every dose; the owner sees the visit calendar, each dose and the bill update live on their phone, as much as the clinic decides to share. Includes a dose calculator, allergy and double-dose checks, automatic billing, lab results and a daily schedule. Full stack: Django REST API with WebSockets and a Next.js web app, tested end to end.",
+          tags: vetsheetTags,
+          image: vetsheetImage("VetSheet pet record: active treatment with its session calendar, clinical history, weight chart, lab results and running bill"),
+          repo: "https://github.com/nuvia-ortiz/vetsheet",
+          demo: "https://vetsheet.vercel.app",
+        },
         {
           name: "Snagkit",
           text: "A QA toolkit that lives in the browser. One click turns a bug into a complete report: annotated screenshot, steps to reproduce, console errors and failed requests. It also tests every form on a page without submitting it, and stress-tests the layout with longer text, 200% zoom and right-to-left to find what breaks. Runs 100% locally.",
@@ -169,7 +182,16 @@ export const content: Record<Lang, Content> = {
       body: "Vienen más proyectos. Sigue el avance en GitHub.",
       cta: "Ver GitHub",
       code: "Código",
+      demo: "Ver la demo",
       items: [
+        {
+          name: "VetSheet",
+          text: "Historia clínica veterinaria que el dueño puede seguir en tiempo real. El veterinario registra el diagnóstico, el plan de tratamiento y cada dosis; el dueño ve en su móvil el calendario de visitas, cada dosis y la cuenta al momento, según lo que la clínica decida compartir. Incluye calculadora de dosis, avisos de alergia y de dosis doble, cobro automático, análisis y agenda del día. Full stack: API en Django con WebSockets y web en Next.js, con tests de punta a punta.",
+          tags: vetsheetTags,
+          image: vetsheetImage("Ficha de una mascota en VetSheet: tratamiento en curso con su calendario de sesiones, historia clínica, peso, análisis y cuenta"),
+          repo: "https://github.com/nuvia-ortiz/vetsheet",
+          demo: "https://vetsheet.vercel.app",
+        },
         {
           name: "Snagkit",
           text: "Un kit de QA que vive en el navegador. Con un clic convierte un bug en un reporte completo: captura anotada, pasos para reproducirlo, errores de consola y peticiones fallidas. Además prueba todos los formularios de una página sin enviarlos y somete el diseño a estrés con texto largo, zoom al 200 % y derecha a izquierda para ver qué se rompe. Funciona 100 % en local.",

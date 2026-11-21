@@ -208,14 +208,26 @@ export default function Home() {
                 <div className="p-5 sm:p-6">
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <h3 className="text-xl font-semibold text-zinc-50">{p.name}</h3>
-                    <a
-                      href={p.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:underline"
-                    >
-                      <GitHubIcon /> {t.projects.code} →
-                    </a>
+                    <span className="flex flex-wrap items-center gap-4">
+                      {p.demo && (
+                        <a
+                          href={p.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-md bg-accent px-3 py-1.5 font-mono text-sm font-semibold text-background hover:brightness-110"
+                        >
+                          ▶ {t.projects.demo}
+                        </a>
+                      )}
+                      <a
+                        href={p.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:underline"
+                      >
+                        <GitHubIcon /> {t.projects.code} →
+                      </a>
+                    </span>
                   </div>
                   <p className="mt-3 text-zinc-400">{p.text}</p>
                   <ul className="mt-4 flex flex-wrap gap-2" aria-label="Tech stack">
