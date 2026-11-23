@@ -25,6 +25,9 @@ const cafekitImage = (alt: string) => ({ src: "/projects/cafekit.png", alt, widt
 const snagkitTags = ["TypeScript", "React", "Chrome Extension (MV3)", "Tailwind CSS", "Vitest", "Playwright"];
 const snagkitImage = (alt: string) => ({ src: "/projects/snagkit.png", alt, width: 1440, height: 1307 });
 
+const frameproofTags = ["TypeScript", "Node.js", "Playwright", "Figma API", "Image diffing", "CLI", "GitHub Actions"];
+const frameproofImage = (alt: string) => ({ src: "/projects/frameproof.png", alt, width: 1440, height: 900 });
+
 type Job = { role: string; company: string; period: string; text?: string };
 
 type Content = {
@@ -106,6 +109,14 @@ export const content: Record<Lang, Content> = {
       code: "Code",
       demo: "Live demo",
       items: [
+        {
+          name: "Frameproof",
+          text: "A QA tool that checks a built page against its Figma design. It opens the page in a real browser at the frame's width, finds the element for every text layer and checks its wording, font, size, weight, line height, spacing, colour and position, then runs a pixel diff for everything else (a button colour, an image, a gap). The HTML report marks each difference on the design and the page side by side, with swipe and overlay views, in English or Spanish, and the command can fail a CI run when the build drifts from the design.",
+          tags: frameproofTags,
+          image: frameproofImage("Frameproof report: match scores, the design and the built page side by side with boxes around each difference, and the list of issues"),
+          repo: "https://github.com/nuvia-ortiz/frameproof",
+          demo: "https://nuvia-ortiz.github.io/frameproof/",
+        },
         {
           name: "Cafe Kit",
           text: "A website template for cafés that every owner makes their own. Customers scan a QR code on the table, see today's menu and send their order by WhatsApp, Telegram or a call, with the table number filled in. Each owner logs into a panel to change prices, mark what is sold out, upload photos and restyle the whole site (colours with contrast checks, fonts, menu layout, sections) with a live preview of the real page. One install serves many cafés, each with its own account and printable QR codes. Tested end to end.",
@@ -195,6 +206,14 @@ export const content: Record<Lang, Content> = {
       code: "Código",
       demo: "Ver la demo",
       items: [
+        {
+          name: "Frameproof",
+          text: "Herramienta de QA que compara una web ya maquetada con su diseño de Figma. Abre la página en un navegador real al ancho del frame, encuentra el elemento de cada capa de texto y revisa el texto, la tipografía, el tamaño, el grosor, el interlineado, el espaciado, el color y la posición; después compara los píxeles para todo lo demás (el color de un botón, una imagen, un hueco). El informe HTML marca cada diferencia sobre el diseño y la web lado a lado, con vista deslizante y superpuesta, en español o inglés, y el comando puede hacer fallar el CI cuando la web se aparta del diseño.",
+          tags: frameproofTags,
+          image: frameproofImage("Informe de Frameproof: puntuaciones, el diseño y la web lado a lado con un recuadro en cada diferencia, y la lista de fallos"),
+          repo: "https://github.com/nuvia-ortiz/frameproof",
+          demo: "https://nuvia-ortiz.github.io/frameproof/",
+        },
         {
           name: "Cafe Kit",
           text: "Plantilla de web para cafeterías que cada dueño hace suya. El cliente escanea el QR de la mesa, ve la carta del día y envía su pedido por WhatsApp, Telegram o llamada, con el número de mesa ya puesto. El dueño entra a un panel para cambiar precios, marcar lo que no hay, subir fotos y cambiar el estilo de toda la web (colores con control de contraste, letras, forma de la carta, secciones) viendo al momento su página real. Una sola instalación sirve a muchas cafeterías, cada una con su cuenta y sus QR para imprimir. Con tests de punta a punta.",
