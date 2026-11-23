@@ -28,6 +28,9 @@ const snagkitImage = (alt: string) => ({ src: "/projects/snagkit.png", alt, widt
 const frameproofTags = ["TypeScript", "Node.js", "Playwright", "Figma API", "Image diffing", "CLI", "GitHub Actions"];
 const frameproofImage = (alt: string) => ({ src: "/projects/frameproof.png", alt, width: 1440, height: 900 });
 
+const aldabaTags = ["Figma", "Figma Plugin API", "Design tokens", "HTML", "CSS", "Accessibility (WCAG 2.2)", "Playwright", "axe-core"];
+const aldabaImage = (alt: string) => ({ src: "/projects/aldaba.png", alt, width: 1440, height: 900 });
+
 type Job = { role: string; company: string; period: string; text?: string };
 
 type Content = {
@@ -109,6 +112,14 @@ export const content: Record<Lang, Content> = {
       code: "Code",
       demo: "Live demo",
       items: [
+        {
+          name: "Aldaba",
+          text: "A design system and website for Casa Aldaba, a fictional guesthouse in the old town of Camagüey, Cuba. A Figma plugin I wrote builds the whole file: colour, spacing and radius variables with light and dark modes, text styles, components with variants and auto layout, and the desktop and mobile screens. The site is hand-coded HTML and CSS with no framework, and its CSS tokens are generated from the same source as Figma, so design and code cannot drift apart. Accessibility is tested with axe in both themes on every push; the tests caught two contrast problems, fixed once in the tokens.",
+          tags: aldabaTags,
+          image: aldabaImage("Casa Aldaba home page: serif headline about a colonial house in Camagüey, booking buttons in terracotta and a photo placeholder, above the rooms section"),
+          repo: "https://github.com/nuvia-ortiz/aldaba",
+          demo: "https://nuvia-ortiz.github.io/aldaba/",
+        },
         {
           name: "Frameproof",
           text: "A QA tool that checks a built page against its Figma design. It opens the page in a real browser at the frame's width, finds the element for every text layer and checks its wording, font, size, weight, line height, spacing, colour and position, then runs a pixel diff for everything else (a button colour, an image, a gap). The HTML report marks each difference on the design and the page side by side, with swipe and overlay views, in English or Spanish, and the command can fail a CI run when the build drifts from the design.",
@@ -206,6 +217,14 @@ export const content: Record<Lang, Content> = {
       code: "Código",
       demo: "Ver la demo",
       items: [
+        {
+          name: "Aldaba",
+          text: "Sistema de diseño y web de Casa Aldaba, una casa de huéspedes ficticia en el centro histórico de Camagüey. Un plugin de Figma que escribí construye el archivo completo: variables de color, espaciado y radios con modo claro y oscuro, estilos de texto, componentes con variantes y auto layout, y las pantallas de escritorio y móvil. La web está maquetada a mano en HTML y CSS, sin frameworks, y sus tokens CSS salen de la misma fuente que los de Figma, así que diseño y código no se desincronizan. La accesibilidad se prueba con axe en los dos temas en cada subida; las pruebas detectaron dos fallos de contraste, corregidos una sola vez en los tokens.",
+          tags: aldabaTags,
+          image: aldabaImage("Inicio de Casa Aldaba: titular con serifa sobre una casa colonial en Camagüey, botones de reserva en terracota y un hueco para la foto, sobre la sección de habitaciones"),
+          repo: "https://github.com/nuvia-ortiz/aldaba",
+          demo: "https://nuvia-ortiz.github.io/aldaba/",
+        },
         {
           name: "Frameproof",
           text: "Herramienta de QA que compara una web ya maquetada con su diseño de Figma. Abre la página en un navegador real al ancho del frame, encuentra el elemento de cada capa de texto y revisa el texto, la tipografía, el tamaño, el grosor, el interlineado, el espaciado, el color y la posición; después compara los píxeles para todo lo demás (el color de un botón, una imagen, un hueco). El informe HTML marca cada diferencia sobre el diseño y la web lado a lado, con vista deslizante y superpuesta, en español o inglés, y el comando puede hacer fallar el CI cuando la web se aparta del diseño.",
