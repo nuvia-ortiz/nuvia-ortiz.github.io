@@ -112,6 +112,7 @@ export const content: Record<Lang, Content> = {
           tags: cafekitTags,
           image: cafekitImage("Cafe Kit style editor: presets, colours and layout controls beside a live phone preview of the café's site"),
           repo: "https://github.com/nuvia-ortiz/cafe-kit",
+          demo: "https://cafe-kit.onrender.com/c/cafeteria-de-barrio",
         },
         {
           name: "VetSheet",
@@ -200,6 +201,7 @@ export const content: Record<Lang, Content> = {
           tags: cafekitTags,
           image: cafekitImage("Editor de estilo de Cafe Kit: estilos, colores y orden de la web junto a la vista previa en el móvil"),
           repo: "https://github.com/nuvia-ortiz/cafe-kit",
+          demo: "https://cafe-kit.onrender.com/c/cafeteria-de-barrio",
         },
         {
           name: "VetSheet",
