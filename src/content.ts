@@ -19,6 +19,9 @@ export type Project = {
 const vetsheetTags = ["Python", "Django", "Django REST Framework", "WebSockets", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Playwright"];
 const vetsheetImage = (alt: string) => ({ src: "/projects/vetsheet.png", alt, width: 1425, height: 1553 });
 
+const cafekitTags = ["Next.js", "TypeScript", "React", "Tailwind CSS", "SQLite", "Server Actions", "Playwright"];
+const cafekitImage = (alt: string) => ({ src: "/projects/cafekit.png", alt, width: 1440, height: 900 });
+
 const snagkitTags = ["TypeScript", "React", "Chrome Extension (MV3)", "Tailwind CSS", "Vitest", "Playwright"];
 const snagkitImage = (alt: string) => ({ src: "/projects/snagkit.png", alt, width: 1440, height: 1307 });
 
@@ -104,6 +107,13 @@ export const content: Record<Lang, Content> = {
       demo: "Live demo",
       items: [
         {
+          name: "Cafe Kit",
+          text: "A website template for cafés that every owner makes their own. Customers scan a QR code on the table, see today's menu and send their order by WhatsApp, Telegram or a call, with the table number filled in. Each owner logs into a panel to change prices, mark what is sold out, upload photos and restyle the whole site (colours with contrast checks, fonts, menu layout, sections) with a live preview of the real page. One install serves many cafés, each with its own account and printable QR codes. Tested end to end.",
+          tags: cafekitTags,
+          image: cafekitImage("Cafe Kit style editor: presets, colours and layout controls beside a live phone preview of the café's site"),
+          repo: "https://github.com/nuvia-ortiz/cafe-kit",
+        },
+        {
           name: "VetSheet",
           text: "Veterinary records that pet owners can follow in real time. The vet records the diagnosis, the treatment plan and every dose; the owner sees the visit calendar, each dose and the bill update live on their phone, as much as the clinic decides to share. Includes a dose calculator, allergy and double-dose checks, automatic billing, lab results and a daily schedule. Full stack: Django REST API with WebSockets and a Next.js web app, tested end to end.",
           tags: vetsheetTags,
@@ -184,6 +194,13 @@ export const content: Record<Lang, Content> = {
       code: "Código",
       demo: "Ver la demo",
       items: [
+        {
+          name: "Cafe Kit",
+          text: "Plantilla de web para cafeterías que cada dueño hace suya. El cliente escanea el QR de la mesa, ve la carta del día y envía su pedido por WhatsApp, Telegram o llamada, con el número de mesa ya puesto. El dueño entra a un panel para cambiar precios, marcar lo que no hay, subir fotos y cambiar el estilo de toda la web (colores con control de contraste, letras, forma de la carta, secciones) viendo al momento su página real. Una sola instalación sirve a muchas cafeterías, cada una con su cuenta y sus QR para imprimir. Con tests de punta a punta.",
+          tags: cafekitTags,
+          image: cafekitImage("Editor de estilo de Cafe Kit: estilos, colores y orden de la web junto a la vista previa en el móvil"),
+          repo: "https://github.com/nuvia-ortiz/cafe-kit",
+        },
         {
           name: "VetSheet",
           text: "Historia clínica veterinaria que el dueño puede seguir en tiempo real. El veterinario registra el diagnóstico, el plan de tratamiento y cada dosis; el dueño ve en su móvil el calendario de visitas, cada dosis y la cuenta al momento, según lo que la clínica decida compartir. Incluye calculadora de dosis, avisos de alergia y de dosis doble, cobro automático, análisis y agenda del día. Full stack: API en Django con WebSockets y web en Next.js, con tests de punta a punta.",
