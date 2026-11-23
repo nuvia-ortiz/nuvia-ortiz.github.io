@@ -4,7 +4,7 @@ Revisado el 23-nov-2026.
 
 ## Estado comprobado
 - Publicación en GitHub Pages en verde (23-nov-2026). https://nuvia-ortiz.github.io responde con 200.
-- La sección Proyectos incluye Frameproof, Cafe Kit, VetSheet y Snagkit.
+- La sección Proyectos incluye Aldaba, Frameproof, Cafe Kit, VetSheet y Snagkit.
 
 ## Lo que falta
 1. **Enlace a LinkedIn:** `src/content.ts` tiene `linkedin: ""`, así que el enlace no se muestra. Hay que pegar la URL del perfil.
