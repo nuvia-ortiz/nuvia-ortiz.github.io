@@ -14,6 +14,7 @@ export type Project = {
   image: { src: string; alt: string; width: number; height: number };
   repo: string;
   demo?: string;
+  figma?: string;
 };
 
 const vetsheetTags = ["Python", "Django", "Django REST Framework", "WebSockets", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Playwright"];
@@ -40,7 +41,7 @@ type Content = {
   experience: { title: string; jobs: Job[] };
   education: { title: string; degree: string; school: string; achievement: string };
   skills: { title: string; groups: { name: string; items: string[] }[] };
-  projects: { title: string; body: string; cta: string; code: string; demo: string; items: Project[] };
+  projects: { title: string; body: string; cta: string; code: string; demo: string; figma: string; items: Project[] };
   contactSection: { title: string; body: string };
   footer: string;
 };
@@ -111,14 +112,16 @@ export const content: Record<Lang, Content> = {
       cta: "See GitHub",
       code: "Code",
       demo: "Live demo",
+      figma: "Figma file",
       items: [
         {
           name: "Aldaba",
-          text: "A design system and website for Casa Aldaba, a fictional guesthouse in the old town of Camagüey, Cuba. A Figma plugin I wrote builds the whole file: colour, spacing and radius variables with light and dark modes, text styles, components with variants and auto layout, and the desktop and mobile screens. The site is hand-coded HTML and CSS with no framework, and its CSS tokens are generated from the same source as Figma, so design and code cannot drift apart. Accessibility is tested with axe in both themes on every push; the tests caught two contrast problems, fixed once in the tokens.",
+          text: "A design system and website for Casa Aldaba, a fictional guesthouse in the old town of Camagüey, Cuba. A Figma plugin I wrote builds the whole file: colour, spacing and radius variables (with a dark mode on Figma plans that allow a second mode), text styles, components with variants and auto layout, and the desktop and mobile screens. The site is hand-coded HTML and CSS with no framework, and its CSS tokens are generated from the same source as Figma, so design and code cannot drift apart. Accessibility is tested with axe in both themes on every push; the tests caught two contrast problems, fixed once in the tokens.",
           tags: aldabaTags,
           image: aldabaImage("Casa Aldaba home page: serif headline about a colonial house in Camagüey, booking buttons in terracotta and a photo placeholder, above the rooms section"),
           repo: "https://github.com/nuvia-ortiz/aldaba",
           demo: "https://nuvia-ortiz.github.io/aldaba/",
+          figma: "https://www.figma.com/design/TX6AvQohQD6dofHZ1TKATo/Aldaba-Design-System",
         },
         {
           name: "Frameproof",
@@ -216,14 +219,16 @@ export const content: Record<Lang, Content> = {
       cta: "Ver GitHub",
       code: "Código",
       demo: "Ver la demo",
+      figma: "Archivo de Figma",
       items: [
         {
           name: "Aldaba",
-          text: "Sistema de diseño y web de Casa Aldaba, una casa de huéspedes ficticia en el centro histórico de Camagüey. Un plugin de Figma que escribí construye el archivo completo: variables de color, espaciado y radios con modo claro y oscuro, estilos de texto, componentes con variantes y auto layout, y las pantallas de escritorio y móvil. La web está maquetada a mano en HTML y CSS, sin frameworks, y sus tokens CSS salen de la misma fuente que los de Figma, así que diseño y código no se desincronizan. La accesibilidad se prueba con axe en los dos temas en cada subida; las pruebas detectaron dos fallos de contraste, corregidos una sola vez en los tokens.",
+          text: "Sistema de diseño y web de Casa Aldaba, una casa de huéspedes ficticia en el centro histórico de Camagüey. Un plugin de Figma que escribí construye el archivo completo: variables de color, espaciado y radios (con modo oscuro en los planes de Figma que permiten un segundo modo), estilos de texto, componentes con variantes y auto layout, y las pantallas de escritorio y móvil. La web está maquetada a mano en HTML y CSS, sin frameworks, y sus tokens CSS salen de la misma fuente que los de Figma, así que diseño y código no se desincronizan. La accesibilidad se prueba con axe en los dos temas en cada subida; las pruebas detectaron dos fallos de contraste, corregidos una sola vez en los tokens.",
           tags: aldabaTags,
           image: aldabaImage("Inicio de Casa Aldaba: titular con serifa sobre una casa colonial en Camagüey, botones de reserva en terracota y un hueco para la foto, sobre la sección de habitaciones"),
           repo: "https://github.com/nuvia-ortiz/aldaba",
           demo: "https://nuvia-ortiz.github.io/aldaba/",
+          figma: "https://www.figma.com/design/TX6AvQohQD6dofHZ1TKATo/Aldaba-Design-System",
         },
         {
           name: "Frameproof",

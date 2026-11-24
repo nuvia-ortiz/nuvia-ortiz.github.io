@@ -219,6 +219,16 @@ export default function Home() {
                           ▶ {t.projects.demo}
                         </a>
                       )}
+                      {p.figma && (
+                        <a
+                          href={p.figma}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:underline"
+                        >
+                          {t.projects.figma} →
+                        </a>
+                      )}
                       <a
                         href={p.repo}
                         target="_blank"
