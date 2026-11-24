@@ -129,6 +129,7 @@ export const content: Record<Lang, Content> = {
           tags: frameproofTags,
           image: frameproofImage("Frameproof report: match scores, the design and the built page side by side with boxes around each difference, and the list of issues"),
           repo: "https://github.com/nuvia-ortiz/frameproof",
+          figma: "https://www.figma.com/design/W7sici9lPeKEN3xxYpcUQP/Frameproof-Diseno-del-informe",
           demo: "https://nuvia-ortiz.github.io/frameproof/",
         },
         {
@@ -137,6 +138,7 @@ export const content: Record<Lang, Content> = {
           tags: cafekitTags,
           image: cafekitImage("Cafe Kit style editor: presets, colours and layout controls beside a live phone preview of the café's site"),
           repo: "https://github.com/nuvia-ortiz/cafe-kit",
+          figma: "https://www.figma.com/design/FjeMagWLgelsnHoSxjpqZV/Cafe-Kit-Diseno-de-la-web",
           demo: "https://cafe-kit.onrender.com/c/cafeteria-de-barrio",
         },
         {
@@ -154,6 +156,7 @@ export const content: Record<Lang, Content> = {
           tags: snagkitTags,
           image: snagkitImage("Snagkit bug report editor with an annotated screenshot, steps to reproduce, console errors and failed requests"),
           repo: "https://github.com/nuvia-ortiz/snagkit",
+          figma: "https://www.figma.com/design/ObmWMEsx92GUrq2tEvKYsf/Snagkit-Diseno-de-la-extension",
         },
       ],
     },
@@ -237,6 +240,7 @@ export const content: Record<Lang, Content> = {
           tags: frameproofTags,
           image: frameproofImage("Informe de Frameproof: puntuaciones, el diseño y la web lado a lado con un recuadro en cada diferencia, y la lista de fallos"),
           repo: "https://github.com/nuvia-ortiz/frameproof",
+          figma: "https://www.figma.com/design/W7sici9lPeKEN3xxYpcUQP/Frameproof-Diseno-del-informe",
           demo: "https://nuvia-ortiz.github.io/frameproof/",
         },
         {
@@ -245,6 +249,7 @@ export const content: Record<Lang, Content> = {
           tags: cafekitTags,
           image: cafekitImage("Editor de estilo de Cafe Kit: estilos, colores y orden de la web junto a la vista previa en el móvil"),
           repo: "https://github.com/nuvia-ortiz/cafe-kit",
+          figma: "https://www.figma.com/design/FjeMagWLgelsnHoSxjpqZV/Cafe-Kit-Diseno-de-la-web",
           demo: "https://cafe-kit.onrender.com/c/cafeteria-de-barrio",
         },
         {
@@ -262,6 +267,7 @@ export const content: Record<Lang, Content> = {
           tags: snagkitTags,
           image: snagkitImage("Editor de reportes de Snagkit con una captura anotada, pasos para reproducir, errores de consola y peticiones fallidas"),
           repo: "https://github.com/nuvia-ortiz/snagkit",
+          figma: "https://www.figma.com/design/ObmWMEsx92GUrq2tEvKYsf/Snagkit-Diseno-de-la-extension",
         },
       ],
     },
