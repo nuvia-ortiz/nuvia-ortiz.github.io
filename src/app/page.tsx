@@ -202,7 +202,7 @@ export default function Home() {
           <div className="space-y-8">
             {t.projects.items.map((p) => (
               <article key={p.name} className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/40">
-                <a href={p.repo} target="_blank" rel="noopener noreferrer" className="block border-b border-zinc-800">
+                <a href={p.repo ?? p.demo ?? p.figma} target="_blank" rel="noopener noreferrer" className="block border-b border-zinc-800">
                   <Image src={p.image.src} alt={p.image.alt} width={p.image.width} height={p.image.height} className="aspect-video w-full object-cover object-top" />
                 </a>
                 <div className="p-5 sm:p-6">
@@ -229,14 +229,16 @@ export default function Home() {
                           {t.projects.figma} →
                         </a>
                       )}
-                      <a
-                        href={p.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:underline"
-                      >
-                        <GitHubIcon /> {t.projects.code} →
-                      </a>
+                      {p.repo && (
+                        <a
+                          href={p.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:underline"
+                        >
+                          <GitHubIcon /> {t.projects.code} →
+                        </a>
+                      )}
                     </span>
                   </div>
                   <p className="mt-3 text-zinc-400">{p.text}</p>

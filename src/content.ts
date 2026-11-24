@@ -12,13 +12,13 @@ export type Project = {
   text: string;
   tags: string[];
   image: { src: string; alt: string; width: number; height: number };
-  repo: string;
+  repo?: string;
   demo?: string;
   figma?: string;
 };
 
-const vetsheetTags = ["Python", "Django", "Django REST Framework", "WebSockets", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Playwright"];
-const vetsheetImage = (alt: string) => ({ src: "/projects/vetsheet.png", alt, width: 1425, height: 1553 });
+const vetmaTags = ["Python", "Django", "Django REST Framework", "WebSockets", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Playwright"];
+const vetmaImage = (alt: string) => ({ src: "/projects/vetma.png", alt, width: 1425, height: 1670 });
 
 const cafekitTags = ["Next.js", "TypeScript", "React", "Tailwind CSS", "SQLite", "Server Actions", "Playwright"];
 const cafekitImage = (alt: string) => ({ src: "/projects/cafekit.png", alt, width: 1440, height: 900 });
@@ -142,13 +142,12 @@ export const content: Record<Lang, Content> = {
           demo: "https://cafe-kit.onrender.com/c/cafeteria-de-barrio",
         },
         {
-          name: "VetSheet",
-          text: "Veterinary records that pet owners can follow in real time. The vet records the diagnosis, the treatment plan and every dose; the owner sees the visit calendar, each dose and the bill update live on their phone, as much as the clinic decides to share. Includes a dose calculator, allergy and double-dose checks, automatic billing, lab results and a daily schedule. Full stack: Django REST API with WebSockets and a Next.js web app, tested end to end.",
-          tags: vetsheetTags,
-          image: vetsheetImage("VetSheet pet record: active treatment with its session calendar, clinical history, weight chart, lab results and running bill"),
-          repo: "https://github.com/nuvia-ortiz/vetsheet",
+          name: "VetMa",
+          text: "Veterinary records that pet owners can follow in real time. The vet records the diagnosis, the treatment plan and every dose; the owner sees the visit calendar, each dose and the bill update live on their phone, as much as the clinic decides to share. Includes a dose calculator, allergy and double-dose checks, automatic billing, lab results and a daily schedule. Full stack: Django REST API with WebSockets and a Next.js web app, tested end to end. It is a product of my own, so the code is private.",
+          tags: vetmaTags,
+          image: vetmaImage("VetMa pet record: active treatment with its session calendar, clinical history, weight chart, lab results and running bill"),
           demo: "https://vetsheet.vercel.app",
-          figma: "https://www.figma.com/design/pf1cluqxTf7wHqaAG70uHW/VetSheet-Diseno-de-la-app",
+          figma: "https://www.figma.com/design/pf1cluqxTf7wHqaAG70uHW/VetMa-Diseno-de-la-app",
         },
         {
           name: "Snagkit",
@@ -253,13 +252,12 @@ export const content: Record<Lang, Content> = {
           demo: "https://cafe-kit.onrender.com/c/cafeteria-de-barrio",
         },
         {
-          name: "VetSheet",
-          text: "Historia clínica veterinaria que el dueño puede seguir en tiempo real. El veterinario registra el diagnóstico, el plan de tratamiento y cada dosis; el dueño ve en su móvil el calendario de visitas, cada dosis y la cuenta al momento, según lo que la clínica decida compartir. Incluye calculadora de dosis, avisos de alergia y de dosis doble, cobro automático, análisis y agenda del día. Full stack: API en Django con WebSockets y web en Next.js, con tests de punta a punta.",
-          tags: vetsheetTags,
-          image: vetsheetImage("Ficha de una mascota en VetSheet: tratamiento en curso con su calendario de sesiones, historia clínica, peso, análisis y cuenta"),
-          repo: "https://github.com/nuvia-ortiz/vetsheet",
+          name: "VetMa",
+          text: "Historia clínica veterinaria que el dueño puede seguir en tiempo real. El veterinario registra el diagnóstico, el plan de tratamiento y cada dosis; el dueño ve en su móvil el calendario de visitas, cada dosis y la cuenta al momento, según lo que la clínica decida compartir. Incluye calculadora de dosis, avisos de alergia y de dosis doble, cobro automático, análisis y agenda del día. Full stack: API en Django con WebSockets y web en Next.js, con tests de punta a punta. Es un producto propio, así que el código es privado.",
+          tags: vetmaTags,
+          image: vetmaImage("Ficha de una mascota en VetMa: tratamiento en curso con su calendario de sesiones, historia clínica, peso, análisis y cuenta"),
           demo: "https://vetsheet.vercel.app",
-          figma: "https://www.figma.com/design/pf1cluqxTf7wHqaAG70uHW/VetSheet-Diseno-de-la-app",
+          figma: "https://www.figma.com/design/pf1cluqxTf7wHqaAG70uHW/VetMa-Diseno-de-la-app",
         },
         {
           name: "Snagkit",
