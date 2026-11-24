@@ -146,6 +146,7 @@ export const content: Record<Lang, Content> = {
           image: vetsheetImage("VetSheet pet record: active treatment with its session calendar, clinical history, weight chart, lab results and running bill"),
           repo: "https://github.com/nuvia-ortiz/vetsheet",
           demo: "https://vetsheet.vercel.app",
+          figma: "https://www.figma.com/design/pf1cluqxTf7wHqaAG70uHW/VetSheet-Diseno-de-la-app",
         },
         {
           name: "Snagkit",
@@ -253,6 +254,7 @@ export const content: Record<Lang, Content> = {
           image: vetsheetImage("Ficha de una mascota en VetSheet: tratamiento en curso con su calendario de sesiones, historia clínica, peso, análisis y cuenta"),
           repo: "https://github.com/nuvia-ortiz/vetsheet",
           demo: "https://vetsheet.vercel.app",
+          figma: "https://www.figma.com/design/pf1cluqxTf7wHqaAG70uHW/VetSheet-Diseno-de-la-app",
         },
         {
           name: "Snagkit",
