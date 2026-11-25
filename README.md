@@ -1,27 +1,31 @@
 # nuvia-ortiz.github.io
 
-Mi web personal y portfolio: **https://nuvia-ortiz.github.io**
+My personal website and portfolio: **https://nuvia-ortiz.github.io**
 
-Diseño oscuro y minimalista, bilingüe (inglés/español), responsive y accesible desde el teclado.
+Dark, minimal design, bilingual (English/Spanish), responsive and fully usable from the keyboard.
 
-## Tecnologías
+## Tech
 
-- [Next.js](https://nextjs.org) 16 (App Router, exportación estática)
+- [Next.js](https://nextjs.org) 16 (App Router, static export)
 - React 19 + TypeScript
 - Tailwind CSS 4
-- Despliegue automático en GitHub Pages con GitHub Actions
+- Automatic deployment to GitHub Pages with GitHub Actions
 
-## Ejecutar en local
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abre http://localhost:3000.
+Open http://localhost:3000.
 
-## Estructura
+## Structure
 
-- `src/content.ts`: todos los textos en inglés y español, separados del diseño.
-- `src/app/page.tsx`: la página y sus secciones.
-- `.github/workflows/deploy.yml`: compila y publica la web en cada push a `main`.
+- `src/content.ts`: all the text in English and Spanish, kept apart from the design.
+- `src/app/page.tsx`: the page and its sections.
+- `.github/workflows/deploy.yml`: builds and publishes the site on every push to `main`.
+
+## License
+
+The code is under the [MIT License](LICENSE). The texts, photos and project images are mine and are not covered by it.
